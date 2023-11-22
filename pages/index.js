@@ -24,8 +24,8 @@ const Index = () => {
                   <SmootherRefProvider>
                     <MediaGalleryPopupProvider>
                       {/* <Template1 /> */}
-                      <Template2 />
-                      {/* <Template3 /> */}
+                      {/* <Template2 /> */}
+                      <Template3 />
                     </MediaGalleryPopupProvider>
                   </SmootherRefProvider>
                 </ActiveMenuProvider>
