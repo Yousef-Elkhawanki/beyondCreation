@@ -95,7 +95,7 @@ export const Footer = ({ footerData }) => {
                   isValid ? (
                     <Thanks
                       customeClass={"thanksLight _eleX"}
-                      text={`Thank You for Subscribe`}
+                      text={`Thank You for Subscribing`}
                     />
                   ) : (
                     <Form>
