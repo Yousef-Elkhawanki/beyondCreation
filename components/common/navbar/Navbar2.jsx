@@ -6,8 +6,10 @@ import FadeIn from "../FadeIn";
 import { motion } from "framer-motion";
 import { ActiveMenu } from "@/contexts/activeMenu";
 import Link from "next/link";
+import { useRouter } from "next/router";
 export const Navbar2 = ({ logo, scroll }) => {
   const { activeMenu, setActiveMenu } = useContext(ActiveMenu);
+  const router = useRouter();
   const links = [
     {
       label: "The Experiences",
@@ -64,6 +66,7 @@ export const Navbar2 = ({ logo, scroll }) => {
               className="mainBtn interactive_label"
               customClass={"_shape"}
               icon={<HiOutlineMail />}
+              onClick={() => router.push("#contact")}
             />
           </div>
         </div>

@@ -1,17 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ImageContainer } from "../image/ImageContainer";
 import { MainBtn } from "../buttons/MainBtn";
-import { DefaultBtn } from "../buttons/DefaultBtn";
-import { FlatBtn } from "../buttons/FlatBtn";
 import { BsPlay } from "react-icons/bs";
 import { SwiperArrow } from "../swiperArrow/SwiperArrow";
-import { Icon } from "../icon/Icon";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import FadeIn from "../FadeIn";
 import Magnitizer from "../Magnitizer";
 import { MediaGalleryPopupContext } from "@/contexts/MediaGalleryPopupContex";
+import { useRouter } from "next/router";
 export const Banner = ({ banner_section }) => {
+  const router = useRouter();
   // const content = banner_section.content;
   // const images = content.find((data) => data.image_desktop).image_desktop;
   // console.log(content);
@@ -161,6 +158,7 @@ export const Banner = ({ banner_section }) => {
                             content={image.first_button}
                             className={`mainBtn interactive_label`}
                             customClass={"_shape"}
+                            onClick={() => router.push("#experience")}
                           />
                           <MainBtn
                             content={image.second_button}

@@ -5,20 +5,13 @@ import { DefaultBtn } from "../buttons/DefaultBtn";
 import { FlatBtn } from "../buttons/FlatBtn";
 import { BsPlay } from "react-icons/bs";
 import { SwiperArrow } from "../swiperArrow/SwiperArrow";
-import { Icon } from "../icon/Icon";
-import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
-import {
-  Autoplay,
-  EffectCoverflow,
-  EffectFade,
-  Pagination,
-} from "swiper/modules";
+
 import FadeIn from "../FadeIn";
 import Magnitizer from "../Magnitizer";
-import useGsapContext from "../useGsapContext";
-import gsap from "gsap";
 import { MediaGalleryPopupContext } from "@/contexts/MediaGalleryPopupContex";
+import { useRouter } from "next/router";
 export const Banner2 = ({ bannerHeader, bannerDescription }) => {
+  const router = useRouter();
   const { setActiveVideo } = useContext(MediaGalleryPopupContext);
   const images = [
     {
@@ -142,6 +135,7 @@ export const Banner2 = ({ bannerHeader, bannerDescription }) => {
                           content={img.first_button}
                           className={"mainBtn interactive_label "}
                           customClass={"_shape"}
+                          onClick={() => router.push("#experience")}
                         />
                         <MainBtn
                           content={img.second_button}
