@@ -7,7 +7,9 @@ import Magnitizer from "../Magnitizer";
 import { isMobileContext } from "@/contexts/isMobileContext";
 import { MediaGalleryPopupContext } from "@/contexts/MediaGalleryPopupContex";
 import { ImageContainer } from "../image/ImageContainer";
+import { useRouter } from "next/router";
 export const Banner3 = ({ banner_section }) => {
+  const router = useRouter();
   const content = banner_section.content;
   // const images = content.find((data) => data.image_desktop).image_desktop;
   // console.log(images);
@@ -144,6 +146,7 @@ export const Banner3 = ({ banner_section }) => {
                         content={img.first_button}
                         className={"mainBtn interactive_label "}
                         customClass={"_shape"}
+                        onClick={() => router.push("#experience")}
                       />
                       <MainBtn
                         content={img.second_button}
