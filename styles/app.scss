@@ -354,6 +354,9 @@ html {
   line-height: 2;
   // text-align: center;
   width: 50%;
+  @media (max-width: $isMobile) {
+    width: 75%;
+  }
 }
 .thanksLight {
   font-size: 1.5rem;
