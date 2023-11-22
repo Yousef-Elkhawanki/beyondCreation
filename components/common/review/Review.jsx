@@ -97,8 +97,7 @@ export const Review = ({ reviewTitle, reviewSubTitle }) => {
               ""
             )}
             {dummyIndex == dummyReviews.length ||
-            dummyReviews.length == 0 ||
-            dummyReviews.length < 3 ? (
+            dummyIndex >= dummyReviews.length - 1 ? (
               ""
             ) : (
               <MainBtn
