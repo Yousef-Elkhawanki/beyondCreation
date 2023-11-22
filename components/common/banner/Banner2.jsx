@@ -135,7 +135,7 @@ export const Banner2 = ({ bannerHeader, bannerDescription }) => {
                           content={img.first_button}
                           className={"mainBtn interactive_label "}
                           customClass={"_shape"}
-                          onClick={() => router.push("#")}
+                          onClick={() => router.push("#experience")}
                         />
                         <MainBtn
                           content={img.second_button}
