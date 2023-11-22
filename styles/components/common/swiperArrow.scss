@@ -1,0 +1,19 @@
+.swiperArrow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+  div {
+    width: 4rem !important;
+    height: 4rem !important;
+    font-size: 1.5rem;
+  }
+  svg {
+    cursor: pointer;
+    font-size: 1.9rem;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+}

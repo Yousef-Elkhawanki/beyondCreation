@@ -1,0 +1,130 @@
+.gallery-container {
+	padding: $padding-mob;
+	background-color: $sub-grey-color;
+	border-radius: $border-radius;
+	overflow: hidden;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1rem;
+	.large-img {
+		overflow: hidden;
+		border-radius: 6px;
+		height: 15rem;
+		img {
+			width: 100%;
+			border-radius: 6px;
+			height: 100%;
+		}
+	}
+	.small-imgs-group {
+		display: grid;
+		grid-template-columns: 1fr;
+		overflow: hidden;
+		grid-gap: 1rem;
+		.img-container {
+			width: 100%;
+			border-radius: 6px;
+			height: 15rem;
+			overflow: hidden;
+			position: relative;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+			.gallery-overLay {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+				background-color: rgba($color: #211d33, $alpha: 0.6);
+				cursor: pointer;
+			}
+		}
+	}
+}
+.all-gallery {
+	.close-button {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: $padding-mob;
+	}
+	.all-gallery-container {
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 1rem;
+		background-color: $sub-grey-color;
+		border-radius: $border-radius;
+		padding: $padding-mob;
+		.img-container {
+			width: 100%;
+			height: 21rem;
+			overflow: hidden;
+			border-radius: 6px;
+			cursor: pointer;
+			position: relative;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+			.gallery-overLay {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+				background-color: rgba($color: #211d33, $alpha: 0.6);
+				cursor: pointer;
+			}
+		}
+	}
+}
+@media (min-width: 1024px) {
+	.gallery-container {
+		padding: $padding-desk;
+		height: calc(40rem + $padding-desk * 2);
+		grid-template-columns: 1fr 1fr;
+		.large-img {
+			height: 40rem;
+		}
+		.small-imgs-group {
+			grid-template-columns: 1fr 1fr;
+			.img-container {
+				height: 19.5rem;
+			}
+		}
+	}
+	.all-gallery {
+		.close-button {
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+			margin-bottom: $padding-desk;
+		}
+		.all-gallery-container {
+			grid-template-columns: 1fr 1fr 1fr;
+			padding: $padding-desk;
+            .img-container{
+                .gallery-overLay {
+                    opacity: 0;
+                    transition: .25s all;
+                }
+                &:hover{
+                    .gallery-overLay{
+                        opacity: 1;
+                    }
+                }
+            }
+		}
+	}
+}

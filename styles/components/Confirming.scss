@@ -1,0 +1,130 @@
+.confirm-booking-container {
+	padding: 2rem $padding-mob;
+	background-color: #fff;
+	border-radius: $border-radius;
+	.header {
+		display: flex;
+		gap: 1.5rem;
+		align-items: center;
+		padding-bottom: 1.667rem;
+		border-bottom: 1px solid $sub-grey-color;
+		img {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+		.header-content {
+			h1 {
+				font-size: 1.25rem;
+				margin-bottom: 0.5rem;
+			}
+			span {
+				font-size: 0.75rem;
+			}
+		}
+	}
+	.booking-details {
+		padding: 2.25rem 0;
+		border-bottom: 1px solid $sub-grey-color;
+		display: flex;
+		flex-direction: column;
+		gap: 1.67rem;
+		&:last-child {
+			border: none;
+			align-items: flex-end;
+			padding-bottom: 0;
+			.print {
+				display: flex;
+				gap: 0.5rem;
+				align-items: center;
+				justify-content: center;
+				color: $blue-color;
+				cursor: pointer;
+			}
+		}
+		h2 {
+			font-size: 1.15rem;
+		}
+		.order-data {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2rem;
+			.item {
+				span {
+					font-size: 0.75rem;
+					text-transform: uppercase;
+				}
+				p {
+					margin-top: 0.5rem;
+				}
+			}
+		}
+		.details {
+			font-size: 0.85rem;
+			display: flex;
+			gap: 0.5rem;
+			align-items: center;
+			p {
+				color: $blue-color;
+			}
+		}
+	}
+}
+.summary-confrim-wrapper{
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	margin-bottom: 6rem;
+}
+@media (min-width: 1024px) {
+	.summary-confrim-wrapper{
+		flex-direction: row;
+		gap: 1.25%;
+		margin-bottom: 0rem;
+	}
+	.confirm-booking-container {
+		width: 66%;
+		padding: 3rem 2.75rem;
+		height: fit-content;
+		.header {
+			img {
+				width: 3.5rem;
+				height: 3.5rem;
+			}
+			.header-content {
+				h1 {
+					font-size: 1.6rem;
+				}
+				span {
+					font-size: 1rem;
+				}
+			}
+		}
+		.booking-details {
+			h2 {
+				font-size: 1.11rem;
+			}
+			.order-data {
+				column-gap: 8rem;
+				row-gap: 2rem;
+			}
+			.details {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+@media print{
+	.confirm-booking-container{
+		.booking-details {
+			&:last-child{
+				.print{
+					display: none;
+				}
+			}
+		}
+	}
+	.summary-container {
+		display: none !important;
+	}
+}

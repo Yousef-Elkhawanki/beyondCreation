@@ -1,0 +1,44 @@
+.booking-widget {
+	margin-top: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	margin-bottom: 6rem;
+	.widget-details {
+		background-color: $sub-grey-color;
+		border-radius: $border-radius;
+		flex: 1.15;
+		padding: 3rem 1rem;
+		.header {
+			padding-bottom: 2rem;
+			border-bottom: 1px solid $grey-color;
+			h1 {
+				margin-bottom: 2rem;
+			}
+			p{
+				margin-bottom: 1rem;
+			}
+			span{
+				span{
+					color: $blue-color;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1024px) {
+	.booking-widget {
+		flex-direction: row;
+		gap: 1.5%;
+		margin-bottom: 0rem;
+		.widget-details {
+			width: 49.25%;
+			padding-inline: 2rem;
+			.header{
+				p{
+					width: 80%;
+				}
+			}
+		}
+	}
+}

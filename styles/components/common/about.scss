@@ -1,0 +1,245 @@
+.about-container {
+  overflow-x: hidden;
+  padding: $padding-section 20.62rem;
+  display: flex;
+  img {
+    object-fit: cover;
+  }
+  @media (max-width: $isMobile) {
+    flex-wrap: wrap;
+    padding-inline: 2rem;
+  }
+  gap: 5rem;
+
+  .about-details {
+    flex: 1;
+    @media (max-width: $isMobile) {
+      flex-basis: 100%;
+    }
+  }
+  .about-images {
+    width: 40%;
+    @media (max-width: $isMobile) {
+      width: 100%;
+    }
+  }
+  .about-images h3 {
+    font-size: $fs-header;
+  }
+  .about-header {
+    margin-bottom: 3.13rem;
+    span {
+      font-weight: 500;
+      font-size: 1.27rem;
+    }
+    h4 {
+      font-weight: 700;
+      font-size: $fs-secondaryHeader;
+      width: 100%;
+    }
+    .about-images {
+      width: 80%;
+    }
+  }
+  .about-image .image {
+    border-radius: $radius;
+    overflow: hidden;
+    position: relative;
+    width: 29.6875rem;
+    width: 100%;
+  }
+  .about-image .image:nth-of-type(1) {
+    height: 55vh;
+    margin-bottom: 1.25rem;
+  }
+  .about-image .image:nth-of-type(2) {
+    height: 25vh;
+  }
+  .about-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    p {
+      opacity: 1;
+      font-size: 1.3rem;
+      margin-bottom: 0;
+      color: $dark;
+      width: 85%;
+      @media (max-width: $isMobile) {
+        width: 100%;
+      }
+    }
+  }
+  .about-list {
+    margin-top: 3.12rem;
+    .header h6 {
+      font-size: 1.8rem;
+      margin-bottom: 1.25rem;
+    }
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.13rem;
+    }
+    .list li {
+      display: flex;
+      align-items: center;
+      gap: 0.94rem;
+      font-size: 1.3rem;
+      svg {
+        color: $main;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+.about-container2 {
+  overflow-x: hidden;
+  padding: $padding-section 0;
+  img {
+    object-fit: cover;
+  }
+  .about-list {
+    h5 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .list {
+    svg {
+      font-size: 2rem;
+      color: $main;
+    }
+    li {
+      font-size: 1.28rem;
+    }
+    .about-description {
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  @media (max-width: $isMobile) {
+    // padding: 0;
+  }
+  .container-fluid {
+    --bs-gutter-x: 35rem !important;
+    @media (max-width: $isMobile) {
+      --bs-gutter-x: 5rem !important;
+    }
+    .about-header {
+      margin-bottom: 3.75rem;
+      span {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+      width: 100%;
+      @media (max-width: $isMobile) {
+        width: 100%;
+      }
+      h4 {
+        font-size: $fs-secondaryHeader;
+        width: 40%;
+        @media (max-width: $isMobile) {
+          width: 100%;
+        }
+      }
+      .about-header3 {
+        width: 100%;
+        @media (max-width: $isMobile) {
+          width: 90%;
+        }
+      }
+    }
+  }
+  .col-md-4 {
+    @media (max-width: $isMobile) {
+      order: 1;
+    }
+  }
+
+  .col-md-8 .image,
+  .col-md-4 .image {
+    height: 40vh;
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+  .col-md-4 .image {
+    @media (max-width: $isMobile) {
+      height: 25vh;
+    }
+  }
+  .col-md-8 .image {
+    @media (max-width: $isMobile) {
+      height: 50vh;
+    }
+  }
+}
+
+.about-container3 {
+  padding-inline: 1rem;
+  overflow-x: hidden;
+  .about-header {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+  img {
+    object-fit: cover;
+  }
+  @media (max-width: $isMobile) {
+    padding-inline: 1rem;
+    gap: 5rem !important;
+  }
+  .row {
+    gap: 5rem !important;
+    @media (max-width: $isMobile) {
+      gap: 5rem !important;
+      .col-md-5 {
+        width: 100%;
+      }
+    }
+    .about-description {
+      margin-bottom: 3rem;
+    }
+  }
+  .image {
+    overflow: visible !important;
+    height: 60vh !important;
+    border-radius: 0 !important;
+    width: 80%;
+    @media (max-width: $isMobile) {
+      width: 80% !important;
+      margin: auto;
+    }
+    img:nth-of-type(2) {
+      transform: rotate(1.977deg);
+      top: 2rem !important;
+      left: 4rem !important;
+      @media (max-width: $isMobile) {
+        left: 1rem !important;
+      }
+    }
+    img:nth-of-type(1) {
+      transform: rotate(-3.936deg);
+      top: -1rem !important;
+    }
+  }
+  .about-list {
+    h5 {
+      font-size: 1.5rem;
+    }
+  }
+  .list {
+    margin-top: 1.5rem;
+  }
+  .list li {
+    display: flex;
+    align-items: center;
+    gap: 0.94rem;
+    font-size: 1.25rem;
+    svg {
+      color: $main;
+      font-size: 1.5rem;
+    }
+  }
+}

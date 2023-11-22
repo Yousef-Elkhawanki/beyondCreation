@@ -1,0 +1,127 @@
+.contact-container {
+  overflow-x: hidden;
+  background: #f4f9fe;
+  padding: $padding-section 20.62rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem;
+  @media (max-width: $isMobile) {
+    gap: 4rem;
+  }
+  .blur {
+    color: rgba(0, 0, 0, 0.5) !important;
+    top: 0 !important;
+    left: 3% !important;
+    backdrop-filter: blur(10px);
+  }
+  @media (max-width: $isMobile) {
+    padding-inline: 2.5rem;
+  }
+  .contact-followUs {
+    flex: 1;
+    @media (max-width: $isMobile) {
+      flex-basis: 100%;
+    }
+    .header {
+      h5 {
+        font-size: $fs-secondaryHeader;
+      }
+      span {
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+    }
+    .contact-info {
+      margin: 3.13rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      .info {
+        display: flex;
+        gap: 1.31rem;
+        align-items: center;
+        span {
+          font-size: 1.2rem;
+        }
+        svg {
+          color: $main;
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .contact-social-media {
+      h6 {
+        font-size: 1.125rem;
+        margin-bottom: 1.56rem;
+      }
+      .social-media {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        font-size: 1.3rem;
+        cursor: pointer;
+        svg:hover {
+          color: $main;
+        }
+      }
+    }
+  }
+  .contact-form {
+    flex: 1;
+    flex-basis: 35%;
+    .header {
+      margin-bottom: 3.75rem;
+      font-weight: 500;
+      p {
+        opacity: 1;
+        width: 80%;
+        @media (max-width: $isMobile) {
+          width: 100%;
+        }
+      }
+      h5 {
+        font-size: $fs-secondaryHeader;
+        margin-bottom: 0.94rem;
+      }
+    }
+  }
+}
+.contact-container3 {
+  overflow-x: hidden;
+  .form-control {
+    border-radius: 0 !important;
+  }
+  .contact-followUs {
+    @media (max-width: $isMobile) {
+      order: -1 !important;
+    }
+  }
+  .mainBtn {
+    border-radius: 0;
+  }
+}
+.contact-container2 {
+  overflow-x: hidden;
+  .mainBtn {
+    border-radius: 6rem;
+    overflow: hidden;
+    position: relative;
+    &::after {
+      content: "";
+      width: 0;
+      height: 100%;
+      background-color: $main;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      transform: skew(30deg);
+      transform-origin: bottom left;
+      transition: 0.4s ease-in;
+    }
+    &:hover::after {
+      width: 100%;
+      transform: skew(0);
+    }
+  }
+}

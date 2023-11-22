@@ -1,0 +1,490 @@
+.experience {
+  overflow-x: hidden;
+  padding: $padding-section 0;
+  img {
+    object-fit: cover;
+  }
+  .swiper {
+    padding-inline: 6rem;
+    @media (max-width: $isMobile) {
+      padding-inline: 2rem;
+    }
+  }
+  .experience-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 3.31rem;
+    padding-inline: 6rem;
+    @media (max-width: $isMobile) {
+      padding-inline: 2rem;
+    }
+    .headers {
+      flex: 1;
+      @media (max-width: $isMobile) {
+        flex: 1.5 1;
+      }
+    }
+    h4 {
+      font-size: $fs-secondaryHeader;
+      margin-bottom: 0;
+      margin-top: 0.25rem;
+    }
+    p {
+      opacity: 1;
+      font-weight: 500 !important;
+    }
+    .swiperArrow {
+      flex: 1;
+    }
+    .next,
+    .prev {
+      width: 3rem;
+      height: 3rem;
+      border: $border;
+      border-color: rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: $radius;
+      cursor: pointer;
+      svg {
+        path {
+          stroke: $dark;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .container {
+    overflow: hidden;
+  }
+}
+.card-container {
+  overflow: hidden;
+  object-fit: cover;
+  position: relative;
+  img {
+    object-fit: cover;
+  }
+  .image-container {
+    border-radius: $radius;
+    overflow: hidden;
+    position: relative;
+    height: 35vh;
+  }
+
+  .card-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 35vh;
+    border-radius: $radius;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1.88rem;
+    .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) !important;
+      z-index: 1;
+      overflow: hidden;
+      width: fit-content;
+      width: 50%;
+      height: 25%;
+      background: transparent;
+      border: 0;
+    }
+    .defaultBtn {
+      background: transparent;
+      position: absolute;
+      top: 200%;
+      left: 50%;
+      transform: translate(-50%, -50%) !important;
+      color: $white;
+      overflow: hidden;
+      transition: 0.4s;
+      @media (max-width: $isMobile) {
+        top: 50%;
+      }
+      &::after {
+        content: "";
+        width: 0%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        background: $white;
+        z-index: -1;
+        transition: 0.4s;
+      }
+      &:hover::after {
+        width: 100%;
+        color: $dark;
+      }
+      &:hover {
+        color: $dark;
+      }
+    }
+    &:hover .defaultBtn {
+      top: 50%;
+      transition: 0.2s linear;
+    }
+    .card-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      .card-date {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+    .card-details h6 {
+      font-size: 1.625rem;
+    }
+    .card-date span {
+      font-size: 1.12rem;
+    }
+    .card-date h6 {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+    .card-date h5 {
+      font-size: 1.125rem;
+    }
+  }
+  .card-description-time {
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    p {
+      width: 80%;
+      margin: 0;
+      color: $dark !important;
+      font-size: 1.2rem;
+    }
+    .time {
+      width: 3.8rem;
+      height: 3.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: $border;
+      border-radius: $radius;
+      border-color: rgba(0, 0, 0, 0.2);
+      padding: 0.5rem;
+    }
+  }
+}
+.experience2 {
+  overflow-x: hidden;
+  padding: $padding-section 0;
+  .header {
+    margin-bottom: 3.75rem;
+    @media (max-width: $isMobile) {
+      width: 80%;
+    }
+    h3 {
+      font-size: $fs-secondaryHeader;
+      @media (max-width: $isMobile) {
+        font-size: 3rem;
+      }
+    }
+    h6 {
+      @media (max-width: $isMobile) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .card-container2 {
+    width: calc((100% / 3) - 2rem);
+    border-radius: 1.25rem;
+    overflow: hidden;
+    border: $border;
+    border-color: rgba(0, 0, 0, 0.1);
+    img {
+      object-fit: cover;
+    }
+    .card-discription {
+      padding: 1.7rem 1.5rem;
+      h4 {
+        font-weight: bold;
+        @media (max-width: $isMobile) {
+          font-size: 2rem;
+        }
+      }
+    }
+    @media (max-width: $isMobile) {
+      width: 100%;
+    }
+    .card-image {
+      width: 100%;
+      overflow: hidden;
+      height: 30vh;
+      @media (max-width: $isMobile) {
+        height: 20vh;
+        width: 100%;
+      }
+      .card-time {
+        bottom: 2rem;
+        left: 2rem;
+        background: $white;
+        padding: 0.5rem 0.8rem;
+        border-radius: 0.25rem;
+        width: fit-content;
+        font-size: 1.2rem;
+        span {
+          font-weight: 500;
+        }
+      }
+    }
+    .card-info {
+      margin-top: 2.3rem;
+      .mainBtn {
+        border-radius: $radius2;
+        height: 3.5rem;
+        position: relative;
+        overflow: hidden;
+        border-color: $dark;
+        color: $dark;
+        border: 0.1rem solid;
+        &::after {
+          content: "";
+          width: 0;
+          height: 100%;
+          background-color: $main;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: -1;
+          transform: skew(30deg);
+          transform-origin: bottom left;
+          transition: 0.4s ease-in;
+        }
+        &:hover:after {
+          width: 100%;
+          transform: skew(0);
+        }
+        &:hover {
+          border-color: $main;
+          color: $white;
+        }
+      }
+      span {
+        // font-weight: 500;
+        @media (max-width: $isMobile) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+  .container-card-items {
+    gap: 2.5rem;
+  }
+  .defaultBtn {
+    border: $border;
+    width: 12rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::after {
+      content: "";
+      width: 0%;
+      height: 100%;
+      background: $dark;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: 0.4s linear;
+      transform-origin: bottom left;
+      z-index: -1;
+      transform: skew(30deg);
+    }
+    &:hover::after {
+      width: 100%;
+      transform: skew(0);
+    }
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.experience3 {
+  overflow-x: hidden;
+  overflow-x: hidden;
+  padding: $padding-section 0;
+  .experienceHeader {
+    margin-bottom: 3rem;
+  }
+  .swiper {
+    padding-inline: 6rem;
+    @media (max-width: $isMobile) {
+      padding-inline: 2rem;
+    }
+  }
+  .experienceHeader {
+    padding-inline: 6rem;
+    @media (max-width: $isMobile) {
+      padding-inline: 2rem;
+    }
+  }
+  .header {
+    h3 {
+      font-size: $fs-secondaryHeader;
+      font-weight: 500;
+    }
+    h6 {
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+    @media (max-width: $isMobile) {
+      flex-basis: 60%;
+    }
+  }
+  .ExperienceCard3 {
+    height: 60vh;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+    }
+    // position: relative;
+    &:hover .overlay-content {
+      background: rgba(0, 0, 0, 0.5);
+    }
+    &:hover .time-clone {
+      top: 2rem !important;
+    }
+    &:hover .price-footer {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:hover .price-footer-clone {
+      bottom: 1rem;
+    }
+
+    .mainBtn {
+      position: absolute;
+      top: 50%;
+      left: -100%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      border-radius: 0;
+      transition: 1s;
+      color: $white;
+      border-color: $white;
+      @media (max-width: $isMobile) {
+        left: 50%;
+      }
+      &::after {
+        content: "";
+        width: 0;
+        height: 100%;
+        background: $main;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0.4s linear;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+      &:hover {
+        border-color: $main;
+        color: $white;
+      }
+    }
+    &:hover .mainBtn {
+      left: 50% !important;
+    }
+  }
+  .ExperiencePrev,
+  .ExperienceNext {
+    width: 3rem;
+    height: 3rem;
+    border: $border;
+    border-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  .overlay-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    background: rgba(0, 0, 0, 0.2);
+
+    .price-footer {
+      // position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.4s 0.2s linear;
+      .time {
+        background: $white;
+        color: $dark;
+        width: 6rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 1s;
+        z-index: 2;
+        font-weight: 500;
+      }
+      @media (max-width: $isMobile) {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .price-footer-clone {
+      position: absolute;
+      bottom: -50rem;
+      transition: 1s;
+      width: 80%;
+      font-size: 0.9rem;
+      @media (max-width: $isMobile) {
+        bottom: 1rem;
+      }
+    }
+  }
+  .time-clone {
+    position: absolute;
+    top: -4rem;
+    right: 1rem;
+    background: $white;
+    color: $dark;
+    width: 6rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    z-index: 2;
+    font-weight: 500;
+    @media (max-width: $isMobile) {
+      top: 2rem;
+    }
+  }
+}

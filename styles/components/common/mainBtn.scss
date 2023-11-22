@@ -1,0 +1,62 @@
+.mainBtn {
+  color: $main;
+  font-style: normal;
+  width: 11rem;
+  height: 3.5rem;
+  border: 0.1rem solid $main;
+  border-radius: $radius;
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.4s;
+  background-color: transparent;
+  span {
+    display: inline-block;
+  }
+  &::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: $main;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.4s;
+  }
+  &:hover {
+    color: $white;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+.defaultBtn {
+  font-weight: 500;
+  background: $white;
+  color: $dark;
+  width: 10rem;
+  height: 3.5rem;
+  border-radius: $radius;
+  border: 0.1rem solid $white;
+  cursor: pointer;
+  font-size: 1.25rem;
+  span {
+    display: inline-block;
+  }
+}
+.flatBtn {
+  background: transparent;
+  border: 0;
+  color: #dad7d5;
+  font-size: $fs-span;
+  font-size: 1.25rem;
+  cursor: pointer;
+  span {
+    text-decoration: underline;
+    display: inline-block;
+  }
+}

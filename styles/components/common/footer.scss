@@ -1,0 +1,246 @@
+footer {
+  position: relative;
+  overflow-x: hidden;
+  padding: $padding-section 0 1rem 0;
+  background: $dark;
+  color: $white;
+  .container1 {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    @media (max-width: $isMobile) {
+      gap: 3rem;
+      flex-direction: column;
+    }
+  }
+  .footer-logo {
+    flex: 1.5 1;
+    .logo {
+      position: relative;
+      margin-bottom: 1.44rem;
+      width: 14rem;
+      height: 4rem;
+    }
+    p {
+      font-size: 1.125rem;
+      opacity: $opacity;
+      width: 60%;
+      @media (max-width: $isMobile) {
+        width: 70%;
+      }
+    }
+  }
+  .footer-links {
+    flex: 0.5;
+    h6 {
+      margin-bottom: 1.88rem;
+      font-size: 1.25rem;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.94rem;
+      a {
+        color: $white;
+        font-size: 1.125rem;
+        opacity: 0.6;
+      }
+    }
+  }
+  .footer-subscriptions {
+    margin-bottom: 1.56rem;
+    position: relative;
+    width: 30rem;
+    height: 5.1875rem;
+    p {
+      width: 70%;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+    @media (max-width: $isMobile) {
+      width: 100%;
+    }
+  }
+  .footer-subscriptions {
+    flex: 2;
+    h6 {
+      font-size: 1.25rem;
+    }
+  }
+  .footer-form {
+    margin-top: 1.87rem;
+    margin-bottom: 1.56rem;
+    position: relative;
+    width: 30rem;
+    height: 5.1875rem;
+    p {
+      width: 70%;
+    }
+    @media (max-width: $isMobile) {
+      width: 90%;
+    }
+    label {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1.87rem;
+      color: rgba(0, 0, 0, 0.5);
+      background: transparent;
+      pointer-events: none;
+      font-size: 1.3rem;
+    }
+    label::after {
+      content: "*";
+      color: $danger;
+    }
+    .mainBtn {
+      background: $dark;
+      border-color: $dark;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) !important;
+      right: 0.81rem;
+      color: $white;
+      &::after {
+        content: none;
+      }
+    }
+  }
+  .form-control {
+    width: 100%;
+    height: 5rem;
+    border-radius: $radius;
+    outline: 0;
+    border: 0;
+    padding: 0 1.87rem;
+  }
+  .form-control:focus {
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+  }
+  .footer-copyRight {
+    border-top: $border;
+    border-color: rgba(255, 255, 255, 0.1);
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.5rem;
+    width: 100%;
+    h6 {
+      font-size: 1.125rem;
+      opacity: 0.6;
+      font-weight: normal;
+    }
+  }
+  .social-media {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.125rem;
+    svg {
+      cursor: pointer;
+    }
+  }
+  .form-error {
+    color: $danger;
+    margin: 0.5rem 0;
+  }
+  .toTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.625rem;
+    height: 3.625rem;
+    border: $border;
+    border-radius: $radius;
+    border-color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    color: $white;
+    position: absolute;
+    right: 3.5rem;
+    top: 8rem;
+    z-index: 90;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.4s;
+    overflow: hidden;
+    z-index: 1;
+    &::after {
+      transition: 0.4s;
+      content: "";
+      width: 0%;
+      height: 100%;
+      background-color: $white;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+    &:hover {
+      color: $dark;
+    }
+    @media (max-width: $isMobile) {
+      right: 2.5rem;
+    }
+  }
+}
+
+.footer2 {
+  overflow-x: hidden;
+  input,
+  .mainBtn,
+  .toTop {
+    border-radius: 6rem;
+  }
+}
+.footer3 {
+  overflow-x: hidden;
+  .container3 {
+    display: flex;
+    align-items: flex-start;
+    gap: 5rem;
+    flex-wrap: wrap;
+    @media (max-width: $isMobile) {
+      gap: 3rem;
+      flex-direction: column;
+    }
+  }
+  .footer-subscriptions {
+    margin-bottom: 1.56rem;
+    position: relative;
+    width: 30rem;
+    height: 5.1875rem;
+    p {
+      width: 70%;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+    @media (max-width: $isMobile) {
+      width: 100%;
+    }
+  }
+
+  input,
+  .mainBtn,
+  .toTop {
+    border-radius: 0;
+  }
+  input {
+    background: #161616;
+    color: $white !important;
+  }
+  input:focus {
+    background: #161616;
+    box-shadow: none;
+  }
+  label {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+}

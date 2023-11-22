@@ -1,0 +1,513 @@
+.banner {
+  position: relative;
+  .play-video {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    left: 6rem;
+    top: 3rem;
+    cursor: pointer;
+    @media (max-width: $isMobile) {
+      left: 2rem;
+    }
+
+    span {
+      color: $white;
+      font-size: 1.4rem;
+    }
+    .icon {
+      border-radius: 0.7rem;
+      width: 4rem;
+      height: 4rem;
+      border: $border;
+      border-color: rgba(255, 255, 255, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      position: relative;
+      z-index: 1;
+      transition: 0.4s;
+      overflow: hidden;
+      &::after {
+        content: "";
+        width: 0%;
+        height: 100%;
+        background: $white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        transition: 0.4s;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+      &:hover {
+        color: $dark;
+      }
+    }
+    svg {
+      font-size: 1.8rem;
+    }
+  }
+  .banner-swiper {
+    background: none;
+    height: calc(100vh - 7rem);
+    padding: 0;
+    border-radius: 0 !important;
+    .banner-img {
+      padding: 0;
+      border-radius: 0 !important;
+      img {
+        border-radius: 0 !important;
+      }
+    }
+  }
+  .banner-data {
+    padding-bottom: 8rem !important;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    justify-content: flex-end !important;
+    align-items: flex-start;
+    padding-inline: 6rem !important;
+    overflow: hidden;
+    @media (max-width: $isMobile) {
+      padding-bottom: 14rem !important;
+      align-items: flex-start;
+      padding-inline: 2rem !important;
+    }
+    h1 {
+      @media (max-width: $isMobile) {
+        margin-right: auto;
+      }
+    }
+
+    .btns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      .mainBtn {
+        border-radius: 0;
+        background: transparent !important;
+        color: $white;
+        border-color: $white;
+        border-radius: 0.7rem;
+        z-index: 1;
+        transition: 0.4s;
+
+        &::after {
+          content: "";
+          width: 0%;
+          height: 100%;
+          background-color: $white;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: 0.4s;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+        &:hover {
+          color: $dark;
+        }
+      }
+    }
+    .banner3-arrows {
+      svg {
+        font-size: 1.8rem;
+      }
+      .next,
+      .prev {
+        width: 4rem;
+        height: 4rem;
+        border: $border;
+        border-radius: 0.7rem;
+        border-color: rgba(255, 255, 255, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+      }
+    }
+  }
+}
+.banner2 {
+  .banner-swiper {
+    background: none;
+    height: 100vh;
+    padding: 0;
+    border-radius: 0 !important;
+    .banner-img {
+      padding: 0;
+      border-radius: 0 !important;
+      img {
+        border-radius: 0 !important;
+      }
+    }
+  }
+  .swiper-pagination-bullets {
+    display: flex !important;
+    justify-content: space-between !important;
+    padding-inline: 3rem;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-100%);
+    @media (max-width: $isMobile) {
+      transform: translateY(-150%);
+    }
+    .banner3-arrows {
+      svg {
+        font-size: 1.8rem;
+      }
+      .next,
+      .prev {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border: $border;
+        border-color: rgba(255, 255, 255, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+      }
+    }
+  }
+
+  .banner-data {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    padding: 0;
+    @media (max-width: $isMobile) {
+      align-items: flex-start;
+      padding-inline: 3rem;
+    }
+    h1 {
+      @media (max-width: $isMobile) {
+        margin-right: auto;
+      }
+    }
+    p {
+      margin: auto;
+      text-align: center;
+      @media (max-width: $isMobile) {
+        text-align: start;
+        margin-right: auto;
+      }
+    }
+    .btns {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      .mainBtn {
+        border-radius: 0;
+        background: transparent;
+        color: $white;
+        border-radius: 6rem;
+        border-color: $white;
+        position: relative;
+        overflow: hidden;
+        &::after {
+          content: "";
+          width: 0;
+          height: 100%;
+          background-color: $white;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: -1;
+          transform: skew(30deg);
+          transform-origin: bottom left;
+          transition: 0.4s ease-in;
+        }
+        &:hover::after {
+          transform: skew(0);
+          width: 100%;
+        }
+        &:hover {
+          color: $dark;
+        }
+      }
+    }
+  }
+  .play-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    text-align: center;
+    @media (max-width: $isMobile) {
+      top: 30%;
+      text-align: start;
+    }
+    .icon {
+      width: 4rem;
+      height: 4rem;
+      border: $border;
+      border-color: rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::after {
+        content: "";
+        width: 0;
+        height: 100%;
+        background-color: $white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        transform: skew(30deg);
+        transform-origin: bottom left;
+        transition: 0.4s ease-in;
+      }
+      svg {
+        font-size: 1.8rem;
+        color: $white;
+        transition: 0.4s;
+      }
+      &:hover::after {
+        transform: skew(0);
+        width: 100%;
+      }
+      &:hover svg {
+        color: $dark !important;
+      }
+    }
+    span {
+      font-size: 1.3rem;
+      color: $white;
+    }
+    .banner3-arrows {
+      svg {
+        font-size: 1.8rem;
+      }
+      .next,
+      .prev {
+        width: 4rem;
+        height: 4rem;
+        border: $border;
+        border-color: rgba(255, 255, 255, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+      }
+    }
+  }
+}
+
+.banner3 {
+  height: 96vh;
+  margin-inline: 6rem;
+  @media (max-width: $isMobile) {
+    margin-inline: 0;
+  }
+  .banner-swiper {
+    background: none;
+    height: 96vh;
+    padding: 0;
+    border-radius: 0 !important;
+    .banner-img {
+      padding: 0;
+      border-radius: 0 !important;
+      img {
+        border-radius: 0 !important;
+      }
+    }
+  }
+  .banner-data {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .btns {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      .mainBtn {
+        border-radius: 0;
+        background: transparent;
+        border: 0.1rem solid $white !important;
+        color: $white;
+        border: 0;
+        position: relative;
+        overflow: hidden;
+        transition: 0.4s linear;
+        &::after {
+          content: "";
+          width: 0;
+          height: 100%;
+          background: $white;
+          position: absolute;
+          left: 0;
+          top: 0;
+          transition: 0.4s linear;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+        &:hover {
+          color: $dark;
+        }
+      }
+    }
+  }
+  .swiper-pagination-bullets {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    padding-inline: 3rem;
+    gap: 2rem !important;
+    @media (max-width: $isMobile) {
+      padding-inline: 2rem;
+      bottom: 9rem !important;
+    }
+    .bullets {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      height: 0.2rem;
+      width: 70%;
+      margin: auto;
+      .bullet {
+        background: rgba($color: $white, $alpha: 0.3);
+        width: calc((100% / 3));
+        height: 0.2rem;
+        position: relative;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        &.active::after {
+          background: $white;
+          animation: timeLine 10150ms linear;
+        }
+        @keyframes timeLine {
+          0% {
+            width: 0;
+          }
+          100% {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .play-video {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    span {
+      color: $white;
+      font-size: 1.4rem;
+      @media (max-width: $isMobile) {
+        display: none;
+      }
+    }
+    .icon {
+      width: 4rem;
+      height: 4rem;
+      border: $border;
+      border-color: rgba(255, 255, 255, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::after {
+        content: "";
+        width: 0;
+        height: 100%;
+        background: $white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0.4s linear;
+        z-index: -1;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+      &:hover svg {
+        color: $dark;
+      }
+    }
+    svg {
+      transition: 0.4s linear;
+      font-size: 1.8rem;
+    }
+  }
+  .banner3-arrows {
+    svg {
+      font-size: 1.8rem;
+    }
+    .next,
+    .prev {
+      width: 4rem;
+      height: 4rem;
+      border: $border;
+      border-color: rgba(255, 255, 255, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+    }
+  }
+}
+
+.textSlider {
+  transition: 3s ease-in-out;
+  animation: animate 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  @keyframes animate {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
