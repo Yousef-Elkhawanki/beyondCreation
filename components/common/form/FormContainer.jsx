@@ -36,7 +36,10 @@ export const FormContainer = ({ style }) => {
         >
           {(formik) =>
             isValid ? (
-              <Thanks customeClass={"thanksDark _eleX"} />
+              <Thanks
+                customeClass={"thanksDark _eleX"}
+                text={`Thank You for reaching out! We will contact you shortly.`}
+              />
             ) : (
               <Form>
                 {console.log(formik)}

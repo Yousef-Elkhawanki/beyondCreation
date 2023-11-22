@@ -42,24 +42,6 @@ export const Banner3 = ({ banner_section }) => {
       first_button: "book now",
       second_button: "secondray link",
     },
-    {
-      img: "/widget/img1.png",
-      body: `Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam`,
-      title: "Skydiving 3",
-      first_button: "book now",
-      second_button: "secondray link",
-    },
-    {
-      img: "/widget/img1.png",
-      body: `Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam`,
-      title: "Skydiving 3",
-      first_button: "book now",
-      second_button: "secondray link",
-    },
   ];
 
   const [slideNumber, setSlideNumber] = useState(1);
@@ -147,11 +129,6 @@ export const Banner3 = ({ banner_section }) => {
                         className={"mainBtn interactive_label "}
                         customClass={"_shape"}
                         onClick={() => router.push("#experience")}
-                      />
-                      <MainBtn
-                        content={img.second_button}
-                        className={"flatBtn interactive_label "}
-                        customClass={"_shape"}
                       />
                     </div>
                   </div>

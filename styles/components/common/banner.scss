@@ -324,7 +324,6 @@
 
 .banner3 {
   height: 96vh;
-  margin-inline: 6rem;
   @media (max-width: $isMobile) {
     margin-inline: 0;
   }
@@ -400,13 +399,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 1rem;
+      gap: 2rem;
       height: 0.2rem;
       width: 70%;
       margin: auto;
       .bullet {
         background: rgba($color: $white, $alpha: 0.3);
-        width: calc((100% / 3));
+        width: calc((100% / 4));
         height: 0.2rem;
         position: relative;
         &::after {

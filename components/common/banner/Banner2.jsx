@@ -137,11 +137,6 @@ export const Banner2 = ({ bannerHeader, bannerDescription }) => {
                           customClass={"_shape"}
                           onClick={() => router.push("#experience")}
                         />
-                        <MainBtn
-                          content={img.second_button}
-                          className={"flatBtn interactive_label "}
-                          customClass={"_shape"}
-                        />
                       </div>
                     </div>
                     {/* {images.map((content) => (

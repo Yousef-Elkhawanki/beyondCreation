@@ -1,13 +1,10 @@
 import React from "react";
 import FadeIn from "../FadeIn";
 
-export const Thanks = ({ customeClass }) => {
+export const Thanks = ({ customeClass, text }) => {
   return (
     <FadeIn>
-      <h4 className={customeClass}>
-        Thank You for reaching out!
-        <br /> We will contact you shortly.
-      </h4>
+      <h4 className={customeClass}>{text}</h4>
     </FadeIn>
   );
 };

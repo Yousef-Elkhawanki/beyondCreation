@@ -84,7 +84,10 @@ export const Footer2 = () => {
               >
                 {(formik) =>
                   isValid ? (
-                    <Thanks customeClass={"thanksLight _eleX"} />
+                    <Thanks
+                      customeClass={"thanksLight _eleX"}
+                      text={`Thank You for Subscribe`}
+                    />
                   ) : (
                     <Form>
                       <FormControl
