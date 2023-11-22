@@ -4,7 +4,6 @@ import { ExperienceCard } from "./ExperienceCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
-import { GsapAnimation } from "../GsapAnimation";
 import FadeIn from "../FadeIn";
 import { ExperienceId } from "@/contexts/handleWadgetId";
 import { HandleWidget } from "@/contexts/activeWidget";

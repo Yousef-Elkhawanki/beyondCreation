@@ -2,8 +2,6 @@ import React, { useContext } from "react";
 import { ImageContainer } from "../image/ImageContainer";
 import { MainBtn } from "../buttons/MainBtn";
 import FadeIn from "../FadeIn";
-import { GsapAnimation } from "../GsapAnimation";
-import { HandleWidget } from "@/contexts/activeWidget";
 
 export const ExperienceCard = ({
   time,

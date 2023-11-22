@@ -4,7 +4,6 @@ import { MainBtn } from "../buttons/MainBtn";
 import { Icon } from "../icon/Icon";
 import { FaBars } from "react-icons/fa";
 import { ImageContainer } from "../image/ImageContainer";
-import { GsapAnimation } from "../GsapAnimation";
 import FadeIn from "../FadeIn";
 import Magnitizer from "../Magnitizer";
 import { ActiveMenu } from "@/contexts/activeMenu";
