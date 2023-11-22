@@ -323,13 +323,13 @@
 }
 
 .banner3 {
-  height: 96vh;
+  height: 100vh;
   @media (max-width: $isMobile) {
     margin-inline: 0;
   }
   .banner-swiper {
     background: none;
-    height: 96vh;
+    height: 100vh;
     padding: 0;
     border-radius: 0 !important;
     .banner-img {
@@ -387,13 +387,14 @@
   }
   .swiper-pagination-bullets {
     display: flex;
-    justify-content: center !important;
+    justify-content: space-between !important;
     align-items: center;
     padding-inline: 3rem;
     gap: 2rem !important;
+    bottom: 5rem !important;
     @media (max-width: $isMobile) {
       padding-inline: 2rem;
-      bottom: 9rem !important;
+      bottom: 14rem !important;
     }
     .bullets {
       display: flex;
@@ -401,7 +402,7 @@
       align-items: center;
       gap: 2rem;
       height: 0.2rem;
-      width: 70%;
+      width: 35%;
       margin: auto;
       .bullet {
         background: rgba($color: $white, $alpha: 0.3);
@@ -429,6 +430,9 @@
           }
         }
       }
+      @media (max-width: $isMobile) {
+        display: none;
+      }
     }
   }
   .play-video {
@@ -438,9 +442,6 @@
     span {
       color: $white;
       font-size: 1.4rem;
-      @media (max-width: $isMobile) {
-        display: none;
-      }
     }
     .icon {
       width: 4rem;

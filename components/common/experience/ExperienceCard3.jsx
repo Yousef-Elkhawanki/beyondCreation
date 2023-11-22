@@ -19,15 +19,17 @@ export const ExperienceCard3 = ({
     <FadeIn>
       <div className="ExperienceCard3 position-relative _eleX">
         <div className="time-clone _eleY">{time}</div>
-        <MainBtn
-          content="Book Now"
-          className="mainBtn interactive_label"
-          customClass={"_shape"}
-          onClick={() => {
-            setExperienceID("9a59ee8e-627f-4a93-a2d4-582b5c3c6010");
-            setActiveWidget(!activeWidget);
-          }}
-        />
+        <div className="btn-container">
+          <MainBtn
+            content="Book Now"
+            className="mainBtn interactive_label"
+            customClass={"_shape"}
+            onClick={() => {
+              setExperienceID("9a59ee8e-627f-4a93-a2d4-582b5c3c6010");
+              setActiveWidget(!activeWidget);
+            }}
+          />
+        </div>
         <ImageContainer src={image} />
         <div className="overlay-content position-absolute top-0 bottom-start-0 end-0  text-white">
           <div className="price-head">

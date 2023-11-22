@@ -361,6 +361,7 @@
   .ExperienceCard3 {
     height: 60vh;
     overflow: hidden;
+    position: relative;
     img {
       object-fit: cover;
     }
@@ -378,38 +379,53 @@
     &:hover .price-footer-clone {
       bottom: 1rem;
     }
-
-    .mainBtn {
+    .btn-container {
       position: absolute;
       top: 50%;
-      left: -100%;
+      left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 2;
-      border-radius: 0;
-      transition: 1s;
-      color: $white;
-      border-color: $white;
-      @media (max-width: $isMobile) {
-        left: 50%;
-      }
-      &::after {
-        content: "";
-        width: 0;
-        height: 100%;
-        background: $main;
-        position: absolute;
-        left: 0;
-        top: 0;
-        transition: 0.4s linear;
-      }
-      &:hover::after {
-        width: 100%;
-      }
-      &:hover {
-        border-color: $main;
+      z-index: 3;
+      width: 12rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border: 0;
+
+      .mainBtn {
+        z-index: 2;
+        border-radius: 0;
+        transition: 1s;
         color: $white;
+        border-color: $white;
+        position: absolute;
+        top: 50%;
+        left: -100%;
+        transform: translate(-50%, -50%);
+        @media (max-width: $isMobile) {
+          left: 50%;
+        }
+        &::after {
+          content: "";
+          width: 0;
+          height: 100%;
+          background: $main;
+          position: absolute;
+          left: 0;
+          top: 0;
+          transition: 0.4s linear;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+        &:hover {
+          border-color: $main;
+          color: $white;
+        }
       }
     }
+
     &:hover .mainBtn {
       left: 50% !important;
     }
