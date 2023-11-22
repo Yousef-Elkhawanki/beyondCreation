@@ -11,6 +11,16 @@ import Widget from "../widget/Widget";
 import { ExperienceId } from "@/contexts/handleWadgetId";
 import { HandleWidget } from "@/contexts/activeWidget";
 export const Template1 = () => {
+  const [scroll, setScroll] = useState();
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 200) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    });
+  });
   const { experienceID } = useContext(ExperienceId);
   const { activeWidget } = useContext(HandleWidget);
   const [dataFetch, setDataFetch] = useState();
@@ -40,7 +50,11 @@ export const Template1 = () => {
         dataFetch && (
           <div className={`template1 ${activeWidget ? "d-none" : ""}`}>
             <VideoPopup />
-            <Navbar header="header" logo="/Logo2.svg" />
+            <Navbar
+              header="header"
+              logo="/Logo2.svg"
+              scroll={scroll ? "template1Scrolled" : ""}
+            />
             <Banner banner_section={banner_section} />
             <Experience />
             <Review

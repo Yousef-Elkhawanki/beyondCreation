@@ -361,3 +361,12 @@ html {
   line-height: 2;
   color: $white;
 }
+
+.template1Scrolled {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba($color: $dark, $alpha: 0.3);
+  transition: 0.4s linear;
+}

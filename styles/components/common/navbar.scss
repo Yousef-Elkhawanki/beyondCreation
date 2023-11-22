@@ -2,6 +2,11 @@ header {
   background: $white;
   padding-block: 1rem;
   height: 7rem;
+  transition: 0.4s linear;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
   .logo {
     position: relative;
     width: 10rem;

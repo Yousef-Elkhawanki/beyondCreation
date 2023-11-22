@@ -9,7 +9,7 @@ import Magnitizer from "../Magnitizer";
 import { ActiveMenu } from "@/contexts/activeMenu";
 import { useRouter } from "next/router";
 
-export const Navbar = ({ header, logo }) => {
+export const Navbar = ({ header, logo, scroll }) => {
   const router = useRouter();
   const { activeMenu, setActiveMenu } = useContext(ActiveMenu);
   const links = [
@@ -32,7 +32,7 @@ export const Navbar = ({ header, logo }) => {
   ];
   return (
     <FadeIn>
-      <header className={`${header} _eleWrap`}>
+      <header className={`${header} ${scroll} _eleWrap`}>
         <nav>
           <div className="container1">
             <div className="logo ">
